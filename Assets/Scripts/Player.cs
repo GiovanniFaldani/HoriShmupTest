@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
         float xInput = Input.GetAxisRaw("Horizontal");
         float yInput = Input.GetAxisRaw("Vertical");
         ApplyMovement(xInput, yInput);
-        if (Input.GetKey("Shoot") && cooldown <= 0)
+        if (Input.GetAxisRaw("Shoot") > 0 && cooldown <= 0)
         {
             cooldown = timeBetweenShots;
             Shoot();
