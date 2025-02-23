@@ -16,6 +16,7 @@ public class GameLibrary : MonoBehaviour
 {
     public List<SplineContainer> randomSplines;
     public Transform playerPos;
+    public int totalEnemies;
 
     //Singleton for getter
     private static GameLibrary instance;
@@ -34,6 +35,9 @@ public class GameLibrary : MonoBehaviour
         }
     }
 
-
+    public void EnemyKilled()
+    {
+        totalEnemies -= 1;
+    }
 
 }

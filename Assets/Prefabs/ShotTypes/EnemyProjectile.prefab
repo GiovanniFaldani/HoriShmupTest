@@ -135,7 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   damage: 1
-  lifeTime: 10
+  lifeTime: 5
   shotSource: 1
   shotType: 0
 --- !u!70 &3070469063598523919

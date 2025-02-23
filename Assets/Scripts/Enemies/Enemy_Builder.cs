@@ -7,6 +7,7 @@ public class Enemy_Builder
 {
     Enemy_Data enemyData;
     SplineContainer spline;
+    GameObject shotType;
 
     public Enemy_Builder SetBaseStats(Enemy_Data enemyData)
     {
@@ -20,6 +21,12 @@ public class Enemy_Builder
         return this;
     }
 
+    public Enemy_Builder SetShotType(GameObject shotType)
+    {
+        this.shotType = shotType;
+        return this;
+    }
+
     public GameObject Build()
     {
         GameObject instance = GameObject.Instantiate(enemyData.enemyPrefab);
@@ -30,12 +37,11 @@ public class Enemy_Builder
         anim.ObjectUpAxis = SplineAnimate.AlignAxis.ZAxis;
         anim.ObjectForwardAxis = SplineAnimate.AlignAxis.XAxis;
         anim.MaxSpeed = enemyData.speed;
+        instance.GetOrAddComponent<Enemy>().SetShotType(enemyData.enemyShotTypePrefab);
 
         // set starting spline position
         instance.transform.position = spline.EvaluatePosition(0f);
         anim.Play();
-
-        // TODO add shot type
 
         return instance;
     }

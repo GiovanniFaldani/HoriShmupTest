@@ -1293,13 +1293,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyDatas:
   - {fileID: 11400000, guid: 6ed1c634f2ba0db448bc446265cc89dd, type: 2}
-  enemyNumber: 5
+  - {fileID: 11400000, guid: 6ed1c634f2ba0db448bc446265cc89dd, type: 2}
+  - {fileID: 11400000, guid: c09d30069949d5741ac63769ec925e4c, type: 2}
+  - {fileID: 11400000, guid: c09d30069949d5741ac63769ec925e4c, type: 2}
+  - {fileID: 11400000, guid: 31318a661e5f5a0408d78489f1f5e117, type: 2}
+  - {fileID: 11400000, guid: 31318a661e5f5a0408d78489f1f5e117, type: 2}
+  enemyNumbers: 050000000500000003000000030000000500000005000000
   spawnInterval: 0.5
+  waveTimes:
+  - 5
+  - 15.5
+  - 21
+  - 24
+  - 30
+  - 35
   splines:
   - {fileID: 3540675252233987095}
   - {fileID: 6275004537314798312}
   - {fileID: 1787483328}
   - {fileID: 1842224672}
+  totalEnemies: 26
 --- !u!4 &1068809501215427204
 Transform:
   m_ObjectHideFlags: 0
@@ -1915,6 +1928,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 896821154584542107, guid: d404154c7e2c51040ac6cc67be83f95b, type: 3}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3179886746759006682, guid: d404154c7e2c51040ac6cc67be83f95b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6

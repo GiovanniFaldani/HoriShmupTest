@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9eb92e9361550a549b088cf7939ac120, type: 3}
-  m_Name: FirstEnemy
+  m_Name: SecondEnemy
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 5348175271789292251, guid: e52486b8226d0254d852da424f6d1501, type: 3}
+  enemyPrefab: {fileID: 5348175271789292251, guid: 8cac71e5126a03f4db8681e7bbfe70e7, type: 3}
   enemyShotTypePrefab: {fileID: 2113079839313953118, guid: f7461e6ee6945614397dde605a1672f8, type: 3}
-  speed: 2
+  speed: 5
