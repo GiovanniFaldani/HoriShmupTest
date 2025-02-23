@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Runtime.CompilerServices;
 using System.Runtime.ConstrainedExecution;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.XInput;
@@ -13,7 +14,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float invincibilityTime = 1f;
     [SerializeField] private GameObject sprite;
     [SerializeField] private GameObject projectilePrefab;
-    [SerializeField] Transform shotSocket;
+    [SerializeField] private Transform shotSocket;
+    [SerializeField] private TextMeshProUGUI displayHealth;
 
     private float cameraSpeed;
     private float xMax = 8.4f;
@@ -94,9 +96,10 @@ public class Player : MonoBehaviour
 
     public void CheckHP()
     {
+        displayHealth.text = health.ToString();
         if (health <= 0)
         {
-                 // game over
+            GameLibrary.Instance.GameOver();
         }
     }
 

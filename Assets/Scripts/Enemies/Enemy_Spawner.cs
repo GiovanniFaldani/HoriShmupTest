@@ -12,6 +12,8 @@ public class Enemy_Spawner : MonoBehaviour
     [SerializeField] float spawnInterval = 1f;
     [SerializeField] List<float> waveTimes;
     [SerializeField] List<SplineContainer> splines;
+    [SerializeField] Enemy_Data bossData;
+    [SerializeField] SplineContainer bossSpline;
     Enemy_Factory enemyFactory;
 
     float globalTimer = 0f;
@@ -82,6 +84,6 @@ public class Enemy_Spawner : MonoBehaviour
 
     private void SpawnBoss()
     {
-        Debug.Log("Boss here!");
+        GameObject boss = enemyFactory.CreateBoss(bossData, bossSpline);
     }
 }

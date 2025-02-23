@@ -34,6 +34,14 @@ public class Enemy : MonoBehaviour
         }
         CheckHP();
     }
+
+    private void LateUpdate()
+    {
+        if(health <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+    }
     public int GetDamage() => contactDamage;
 
     public void SetShotType(GameObject newShotType) => projectilePrefab = newShotType;
@@ -41,7 +49,6 @@ public class Enemy : MonoBehaviour
     {
         if(health <= 0)
         {
-            Destroy(this.gameObject);
             GameLibrary.Instance.EnemyKilled();
         }
     }

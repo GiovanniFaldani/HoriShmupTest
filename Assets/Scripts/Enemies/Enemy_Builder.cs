@@ -39,6 +39,27 @@ public class Enemy_Builder
         anim.MaxSpeed = enemyData.speed;
         instance.GetOrAddComponent<Enemy>().SetShotType(enemyData.enemyShotTypePrefab);
 
+
+        // set starting spline position
+        instance.transform.position = spline.EvaluatePosition(0f);
+        anim.Play();
+
+        return instance;
+    }
+
+    public GameObject BuildBoss()
+    {
+        GameObject instance = GameObject.Instantiate(enemyData.enemyPrefab);
+
+        SplineAnimate anim = instance.GetOrAddComponent<SplineAnimate>();
+        anim.Container = spline;
+        anim.AnimationMethod = SplineAnimate.Method.Speed;
+        anim.ObjectUpAxis = SplineAnimate.AlignAxis.ZAxis;
+        anim.ObjectForwardAxis = SplineAnimate.AlignAxis.XAxis;
+        anim.MaxSpeed = enemyData.speed;
+        instance.GetOrAddComponent<Boss>().SetShotType(enemyData.enemyShotTypePrefab);
+
+
         // set starting spline position
         instance.transform.position = spline.EvaluatePosition(0f);
         anim.Play();

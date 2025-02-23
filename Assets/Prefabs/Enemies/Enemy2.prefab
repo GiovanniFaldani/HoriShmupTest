@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 962554b1d8fbd0546b4c0b6b5f7bc713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenShots: 4
+  timeBetweenShots: 1
   health: 2
   contactDamage: 1
   shotSocket: {fileID: 5048128541730492623}

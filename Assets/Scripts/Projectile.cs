@@ -59,7 +59,7 @@ public class Projectile : MonoBehaviour
 
     private void Move()
     {
-        this.transform.position += (Vector3)direction * speed * Time.deltaTime;
+        this.transform.position += (Vector3)direction.normalized * speed * Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
