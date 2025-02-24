@@ -47,8 +47,8 @@ public class Boss : MonoBehaviour
     {
         if (health <= 0)
         {
-            GameLibrary.Instance.GameOver();
-            Destroy(this.gameObject);
+            sprite.SetActive(false);
+            GameLibrary.Instance.GameOver();;
         }
     }
 

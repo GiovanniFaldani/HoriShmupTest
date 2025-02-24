@@ -58,6 +58,11 @@ public class Enemy_Spawner : MonoBehaviour
             SpawnBoss();
             GameLibrary.Instance.totalEnemies = -1;
         }
+        if(GameLibrary.Instance.totalEnemies > 0 && globalTimer >= waveTimes[waveTimes.Count-1])
+        {
+            SpawnBoss();
+            GameLibrary.Instance.totalEnemies = -1;
+        }
         
     }
 

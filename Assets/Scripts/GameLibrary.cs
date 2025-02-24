@@ -34,7 +34,7 @@ public class GameLibrary : MonoBehaviour
         }
         else
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 
@@ -68,10 +68,11 @@ public class GameLibrary : MonoBehaviour
 
     public void GameOver()
     {
-        Time.timeScale = 0f;
         gameOverScreen.SetActive(true);
-        if (Input.GetAxisRaw("Shoot")>0)
+        Time.timeScale = 0f;
+        if (Input.GetKey(KeyCode.Q))
         {
+            Time.timeScale = 1f;
             SceneManager.LoadScene("MainMenu");
         }
     }
